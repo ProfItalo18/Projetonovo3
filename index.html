@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento Financeiro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gerenciamento Financeiro</h1>
+    
+    <!-- Formulário para adicionar receita/despesa -->
+    <div class="form-section">
+      <form id="finance-form">
+        <input type="text" id="description" placeholder="Descrição" required>
+        <input type="number" id="amount" placeholder="Valor" required>
+        <select id="type">
+          <option value="receita">Receita</option>
+          <option value="despesa">Despesa</option>
+        </select>
+        <button type="submit">Adicionar</button>
+      </form>
+    </div>
+
+    <!-- Exibição da Tabela -->
+    <table id="finance-table">
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Valor</th>
+          <th>Tipo</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- Exibição de Gráfico -->
+    <canvas id="finance-chart"></canvas>
+
+    <!-- Exibição do saldo -->
+    <div class="balance">
+      <h3>Saldo Total: <span id="balance-amount">R$ 0.00</span></h3>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
